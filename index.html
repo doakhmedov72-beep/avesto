@@ -240,7 +240,7 @@ let editing=null;
 
 const sites=["Все 5 предприятий",...Array.from({length:5},(_,i)=>"Предприятие № "+(i+1))];
 const state={page:"dashboard",site:"Все 5 предприятий",period:"month",status:"Все",query:""};
-const navs=[["dashboard","▤","Главная"],["incidents","◉",names.incidents],["effect","◈",names.effect],["investigations","▣",names.investigations],["orders","☷",names.orders],["guards","♜",names.guards],["counterparties","♧",names.counterparties],["vehicles","▤",names.vehicles]];
+const navs=[["dashboard","▤","Главная"],["incidents","◉",names.incidents],["effect","◈",names.effect],["investigations","▣",names.investigations],["orders","☷",names.orders],["guards","♜",names.guards],["vehicles","▤",names.vehicles]];
 const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 function entries(key){return journals[key].filter(r=>state.site===sites[0]||r.site===state.site)}
 function allEntries(){return Object.keys(journals).flatMap(k=>entries(k).map(r=>({...r,journal:k})))}
