@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AVESTO GROUP — Центр безопасности (демо)</title>
+<style>
+:root{--green:#0c513c;--green2:#14664c;--mint:#eaf4ef;--teal:#168b89;--ink:#18372f;--muted:#667b75;--line:#dce6e2;--bg:#f4f7f6;--white:#fff;--red:#ba4044;--orange:#b66d21}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.48 "Segoe UI",Arial,sans-serif}button,select,input{font:inherit}button{cursor:pointer}.top{height:49px;background:#fff;border-bottom:1px solid #e1e8e5;display:flex;align-items:center;gap:17px;padding:0 23px;position:sticky;top:0;z-index:10}.waffle{font-size:21px;color:#5b6965}.brand{font-weight:800;color:var(--green);letter-spacing:.3px}.sp{flex:1}.topright{color:#526b61;font-size:12px}.avatar{border-radius:50%;background:#dbece5;color:var(--green);font-weight:700;padding:7px 11px}.shell{display:flex;min-height:calc(100vh - 49px)}.sidebar{width:238px;flex-shrink:0;background:#fff;border-right:1px solid var(--line);padding:24px 13px}.sidehead{font-size:11px;font-weight:700;letter-spacing:1px;color:#80958c;margin:0 13px 13px}.nav{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:transparent;border:0;color:#3d5a50;padding:11px 12px;border-radius:6px;margin:2px 0;font-weight:550}.nav:hover{background:#f1f7f4}.nav.active{background:#e5f1eb;color:var(--green);font-weight:750;border-left:3px solid var(--green)}.nav .sym{width:22px;text-align:center;font-size:17px}.content{flex:1;min-width:0;max-width:1640px;padding:28px 38px 65px}.crumb{font-size:12px;color:#778f85;margin-bottom:16px}.crumb b{color:var(--green)}.hero{background:#145B44;color:white;border-radius:11px;padding:27px 30px 26px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;right:40px;top:-70px;width:340px;height:270px;border:2px solid #ffffff16;transform:skew(-34deg)}.eyebrow{font-size:11px;letter-spacing:1.8px;font-weight:700;color:#a9dfd0}.hero h1{font-size:clamp(24px,3vw,37px);line-height:1.15;margin:12px 0 9px;letter-spacing:-.5px}.hero p{color:#d9eae2;margin:0;font-size:14px}.demo{display:inline-block;background:#e7f7f1;color:#0a573d;border-radius:20px;padding:4px 10px;font-size:11px;font-weight:750;margin-left:10px}.toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:22px 0 18px}.toolbar label{font-weight:700;color:#4b6b60;font-size:12px}.seg{display:flex;gap:5px;background:#e8efec;padding:4px;border-radius:8px}.seg button{border:0;border-radius:6px;background:transparent;color:#375d4e;padding:9px 16px;font-weight:700}.seg button.active{background:var(--green);color:#fff;box-shadow:0 2px 4px #163d2929}.toolbar select,.search{padding:10px 12px;border:1px solid #c8dad2;border-radius:7px;background:#fff;color:var(--ink);min-width:205px}.cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}.kpi{background:white;border:1px solid var(--line);border-left:4px solid var(--green);border-radius:8px;padding:18px 15px;text-align:left;min-height:134px;box-shadow:0 2px 7px #173d2910;transition:transform .15s,box-shadow .15s}.kpi:hover{transform:translateY(-2px);box-shadow:0 5px 14px #173d2925}.kpi .lbl{font-size:12px;color:#547064;font-weight:750;text-transform:uppercase}.kpi strong{display:block;font-size:37px;line-height:1.25;color:var(--green);margin:9px 0 2px}.kpi small{font-size:11px;color:#789087}.kpi.critical{border-left-color:var(--red)}.kpi.critical strong{color:var(--red)}.kpi.late{border-left-color:var(--orange)}.kpi.late strong{color:var(--orange)}.section{background:white;border:1px solid var(--line);border-radius:10px;padding:23px 25px;margin-top:20px;box-shadow:0 2px 8px #153f2a0a}.section h2{font-size:20px;color:var(--green);margin:0 0 5px}.section .sub{font-size:12px;color:#789087;margin-bottom:17px}.summary{display:grid;grid-template-columns:75px 1fr 1.3fr 110px;gap:12px;align-items:center;border:1px solid #e3ebe7;border-radius:6px;padding:13px 14px;margin:7px 0;background:#fbfdfc;cursor:pointer}.summary:hover{border-color:#7fb8a0;background:#f2f9f5}.summary .time{font-weight:800;color:var(--green)}.summary .name{font-weight:650}.summary .note{color:#687d74;font-size:12px}.pill{display:inline-block;border-radius:15px;background:#edf3f0;padding:4px 10px;font-size:11px;font-weight:700;color:#416554;white-space:nowrap}.pill.bad{background:#fceeee;color:#ad373c}.pill.warn{background:#fff1e5;color:#a36216}.pill.good{background:#e6f3eb;color:#1b7050}.foot{margin-top:23px;color:#83968d;font-size:11px;display:flex;justify-content:space-between;gap:15px}.tablewrap{overflow-x:auto}.data{width:100%;border-collapse:collapse;min-width:760px}.data th{text-align:left;background:#f0f6f2;color:#527363;font-size:11px;text-transform:uppercase;letter-spacing:.4px;padding:13px 11px;border-bottom:1px solid #dce9e2}.data td{border-bottom:1px solid #e9efeb;padding:13px 11px;vertical-align:middle}.data tbody tr{cursor:pointer}.data tbody tr:hover{background:#f3f9f5}.data .id{font-weight:750;color:var(--green);white-space:nowrap}.data .titlecell{font-weight:600}.filterrow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:17px 0}.filterrow input{min-width:240px;flex:1}.linkbtn{border:1px solid #bdd5c7;background:white;border-radius:7px;color:var(--green);padding:9px 13px;font-weight:700}.linkbtn:hover{background:#eaf4ef}.hint{color:#71887e;font-size:12px}.overlay{position:fixed;inset:0;background:#102a20a6;z-index:30;display:none;justify-content:flex-end}.overlay.open{display:flex}.panel{background:#fff;width:min(610px,100%);height:100%;overflow:auto;box-shadow:-8px 0 35px #0002;padding:27px 30px}.panelheader{display:flex;justify-content:space-between;gap:15px;align-items:start;border-bottom:1px solid var(--line);padding-bottom:18px}.close{border:0;background:#eef5f0;border-radius:6px;padding:6px 12px;font-size:20px;color:var(--green)}.detailgrid{display:grid;grid-template-columns:145px 1fr;gap:13px;border-bottom:1px solid #edf1ee;padding:14px 0}.detailgrid span:first-child{color:#789087}.detailgrid span:last-child{font-weight:600}.noteBox{background:#f1f7f3;border-left:4px solid var(--teal);padding:17px;border-radius:4px;margin-top:19px;white-space:pre-wrap}.empty{padding:25px;color:#728a7f;text-align:center}.section-top{display:flex;justify-content:space-between;align-items:center;gap:15px}.mini{color:#719080;font-size:12px}@media(max-width:1050px){.sidebar{width:66px}.sidehead,.nav span:last-child{display:none}.nav{justify-content:center}.content{padding:20px}.cards{grid-template-columns:repeat(3,1fr)}}@media(max-width:700px){.sidebar{display:none}.topright{display:none}.content{padding:14px}.hero{padding:23px 19px}.cards{grid-template-columns:repeat(2,1fr)}.summary{grid-template-columns:48px 1fr 80px}.summary .note{display:none}.section{padding:17px}.toolbar select{min-width:170px}.kpi{min-height:110px;padding:12px}.kpi strong{font-size:30px}.seg button{padding:8px 10px}}
+
+/* AVESTO Executive UI — modern visual layer */
+:root{--green:#0d655b;--green2:#087b71;--mint:#eaf8f5;--teal:#12a69b;--ink:#152b39;--muted:#748797;--line:#e4edf0;--bg:#f4f7fa;--white:#fff;--red:#d75058;--orange:#d48a37}
+body{font-family:Inter,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:14px}
+.top{height:68px;background:#fff;border-bottom:1px solid #e7edf1;padding:0 34px;gap:15px;box-shadow:0 1px 9px #102e4010}
+.waffle{background:#e8f6f3;color:#07877d;width:35px;height:35px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px}
+.brand{font-size:16px;color:#123c44;font-weight:850;letter-spacing:.7px}
+.topright{color:#728696;font-size:12px}.avatar{background:#d9f3ed;color:#076e64;padding:9px 12px}
+.shell{min-height:calc(100vh - 68px)}.sidebar{width:260px;background:#0d2335;border:0;padding:31px 15px;position:relative}
+.sidehead{color:#7893a5;letter-spacing:1.7px;margin:0 15px 19px}
+.nav{color:#b9ccd5;border-radius:11px;padding:13px 14px;margin:5px 0;transition:background .15s,color .15s}
+.nav:hover{background:#19374a;color:#fff}.nav.active{background:#145B44;border-left:0;color:#fff;box-shadow:0 5px 14px #071c2b50}
+.nav .sym{font-size:19px;color:#72bfb6}.nav.active .sym{color:#fff}
+.sidebar div[style*="margin:35px"]{color:#7f9ba9!important;border-top:1px solid #284052;padding-top:23px;margin-top:35px!important}
+.content{padding:32px 45px 68px;max-width:1700px}.crumb{font-size:12px;color:#8b9ca9;margin-bottom:20px}
+.crumb b{color:#1c817a}
+.hero{border-radius:17px;padding:34px 38px 37px;background:#145B44;box-shadow:0 15px 35px #163c4b20;min-height:166px}
+.hero:after{width:420px;height:330px;right:80px;top:-130px;border:1px solid #ffffff22;box-shadow:25px 25px 0 #ffffff08,50px 50px 0 #ffffff08;transform:skew(-29deg)}
+.eyebrow{color:#80ded1;font-size:11px}.hero h1{font-size:clamp(26px,3vw,40px);font-weight:800;letter-spacing:-1px;margin:14px 0 11px}.hero p{color:#c5e2df;font-size:14px}
+.demo{background:#d5faf0;color:#0d655b;padding:5px 11px;letter-spacing:.5px}
+.toolbar{margin:24px 0 21px;gap:13px}.toolbar label{color:#6b8391;letter-spacing:.4px}
+.seg{background:#e9f0f3;padding:5px;border-radius:11px;gap:3px}.seg button{border-radius:8px;padding:10px 18px;color:#5d7887;font-size:12px;letter-spacing:.3px}.seg button.active{background:#11786f;color:#fff;box-shadow:0 3px 9px #16685c2c}
+.toolbar select,.search,.filterrow select{border:1px solid #dce7ec;background:white;border-radius:10px;min-height:42px;box-shadow:0 2px 6px #173a4810;color:#244555}
+.cards{gap:16px}.kpi{border:1px solid #e6eef0;border-top:3px solid #0a9387;border-left:1px solid #e6eef0;border-radius:15px;padding:20px 20px;min-height:150px;box-shadow:0 7px 23px #1e44500e;position:relative;overflow:hidden}
+.kpi:after{content:'↗';position:absolute;right:17px;top:16px;color:#a8c7c6;font-size:20px}.kpi:hover{transform:translateY(-3px);box-shadow:0 13px 25px #1e44501f;border-color:#b9e2da}
+.kpi .lbl{color:#667f8e;font-size:11px;letter-spacing:.55px}.kpi strong{font-size:42px;font-weight:800;color:#0b6d65;margin:13px 0 4px;letter-spacing:-1.5px}.kpi small{color:#8299a5;font-size:11px}
+.kpi.critical{border-top-color:#df5d65;border-left-color:#e6eef0}.kpi.critical strong{color:#cf4954}.kpi.late{border-top-color:#e8a051;border-left-color:#e6eef0}.kpi.late strong{color:#c78132}
+.section{border:1px solid #e6edf0;border-radius:16px;padding:26px 28px;margin-top:23px;box-shadow:0 8px 26px #1e44500d}
+.section h2{font-size:20px;color:#1b3d4c;font-weight:800;letter-spacing:-.4px}.section .sub{color:#8b9ca5;margin-bottom:20px}
+.summary{grid-template-columns:80px 1fr 1.2fr 105px;padding:16px 17px;border:1px solid #e7eff0;background:#fbfcfd;border-radius:10px;margin:9px 0;transition:background .15s,border-color .15s}
+.summary:hover{background:#eef9f6;border-color:#a4d6cc}.summary .time{color:#128177}.summary .name{font-weight:700;color:#203e4b}.summary .note{color:#78909a}
+.pill{border-radius:7px;background:#eaf4f1;color:#1c7569;padding:5px 9px}.pill.good{background:#e4f6ed;color:#16825b}.pill.warn{background:#fff1df;color:#af752d}.pill.bad{background:#ffeaeb;color:#b9414d}
+.data th{background:#f4f8fa;color:#78909c;font-size:10px;padding:16px 13px}.data td{padding:17px 13px;border-color:#edf2f3}.data tbody tr:hover{background:#effaf7}.data .id{color:#07857c}
+.linkbtn{border:1px solid #c6e4dc;border-radius:10px;padding:11px 16px;color:#087b71}
+.panel{padding:34px 35px}.panelheader h2{font-size:24px;line-height:1.25}.detailgrid{grid-template-columns:150px 1fr}.noteBox{background:#f0faf7;border-left-color:#0b9b8e;border-radius:9px;padding:20px}
+.foot{color:#9badb5;margin-top:26px}.hint{color:#8b9fa8}
+@media(max-width:1100px){.sidebar{width:75px}.content{padding:25px}.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.sidebar{display:none}.top{height:59px;padding:0 14px}.content{padding:13px}.hero{padding:25px 21px;min-height:150px}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.kpi{min-height:128px;padding:15px}.kpi strong{font-size:34px}.section{padding:18px}.summary{grid-template-columns:60px 1fr 85px;padding:12px}.toolbar{gap:8px}.seg button{padding:9px 10px}}
+</style>
+<style>
+/* Компактная панель ГД */
+.content{padding:22px 30px 40px}
+.crumb{margin-bottom:11px}
+.hero{padding:20px 25px 21px;border-radius:10px}
+.hero h1{font-size:clamp(23px,2.5vw,30px);margin:8px 0 6px}
+.hero p{font-size:13px}
+.toolbar{margin:15px 0 13px;gap:9px}
+.seg button{padding:7px 12px}
+.toolbar select{padding:8px 10px}
+.cards{gap:10px}
+.kpi{padding:13px 14px;min-height:102px;border-radius:8px;box-shadow:0 1px 4px #173d2910}
+.kpi strong{font-size:30px;margin:5px 0 0}
+.kpi .lbl{font-size:11px}
+.kpi small{font-size:10px}
+.section{padding:18px 21px;margin-top:14px}
+.section h2{font-size:18px}
+.section .sub{margin-bottom:10px}
+.summary{padding:10px 12px;margin:5px 0}
+.foot{margin-top:14px}
+@media(max-width:700px){.content{padding:12px}.hero{padding:19px 17px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi{min-height:98px}.section{padding:15px}}
+</style>
+
+<style>
+:root{--green:#145B44;--green2:#167B44;--mint:#EFF6F1;--teal:#167B44;--ink:#173F30;--muted:#607A6A;--line:#DCEAE1;--bg:#F5F9F7;--white:#FFFFFF}
+body{background:#F5F9F7;color:#173F30}
+.top{background:#FFFFFF;border-bottom:1px solid #DCEAE1}
+.brand,.crumb b,.section h2,.data .id{color:#145B44}
+.sidebar{background:#FFFFFF;border-right:1px solid #DCEAE1}
+.nav.active{background:#EFF6F1;color:#145B44;border-left-color:#167B44}
+.nav:hover{background:#F1F7F4}
+.hero{background:#145B44!important;color:#FFFFFF;border:0;border-radius:9px;box-shadow:none}
+.hero:after{display:none!important}
+.eyebrow{color:#D3EBDB}
+.hero p{color:#E0EEE5}
+.demo{background:#EFF6F1;color:#145B44}
+.kpi{background:#FFFFFF;border:1px solid #DCEAE1;border-left:3px solid #167B44;box-shadow:none;border-radius:7px}
+.kpi:hover{box-shadow:0 3px 12px #145B4414}
+.kpi strong{color:#145B44}
+.section{background:#FFFFFF;border:1px solid #DCEAE1;box-shadow:none;border-radius:8px}
+.summary{background:#FFFFFF;border:1px solid #E0EEE5}
+.summary:hover{background:#EFF6F1;border-color:#B3D4BF}
+.seg{background:#EFF6F1}
+.seg button.active{background:#167B44;color:#FFFFFF;box-shadow:none}
+.pill.good{background:#EFF6F1;color:#145B44}
+.data th{background:#EFF6F1;color:#145B44}
+.data tbody tr:hover{background:#F1F7F4}
+.linkbtn{color:#145B44;border-color:#BFD8C8}
+.noteBox{background:#EFF6F1;border-left-color:#167B44}
+</style>
+<style>.actionbtn{background:#167B44;color:white;border:1px solid #167B44;border-radius:7px;padding:10px 15px;cursor:pointer;font-weight:650}.actionbtn:hover{background:#145B44}.editmini{margin-left:9px;border:1px solid #bed8c7;background:#eff6f1;color:#145b44;padding:5px 8px;border-radius:5px;cursor:pointer;font-size:11px}.formgrid{display:grid;gap:12px;margin-top:18px}.formfield{display:grid;gap:5px;font-size:12px;color:#476756;font-weight:600}.formfield input,.formfield select,.formfield textarea{font:inherit;font-size:14px;padding:10px;border:1px solid #d3e4d9;border-radius:7px;background:white;color:#173f30;width:100%;box-sizing:border-box}.formfield textarea{resize:vertical}.formactions{display:flex;gap:10px;margin-top:20px}.panel{overflow-y:auto}</style>
+<style id="avesto-reference-design">
+:root{--green:#145b44;--green2:#103e32;--mint:#ebf5f0;--teal:#0f856d;--ink:#172c35;--muted:#71818b;--line:#e2e8ed;--bg:#f5f7fa;--white:#fff;--red:#c74451;--orange:#b47c26}
+body{background:var(--bg);color:var(--ink);font:14px/1.5 "Segoe UI",Arial,sans-serif}
+.top{height:62px;padding:0 30px;background:#fff;border-bottom:1px solid var(--line);box-shadow:none}
+.waffle{width:32px;height:32px;background:var(--mint);border-radius:7px;display:grid;place-items:center;color:var(--green);font-size:21px}
+.brand{font-size:17px;font-weight:800;color:var(--green);letter-spacing:.5px}
+.topright{color:var(--muted);font-size:13px}
+.avatar{background:#e3f2eb;color:var(--green);border-radius:50%;padding:9px 12px}
+.shell{min-height:calc(100vh - 62px)}
+.sidebar{width:250px;background:#fff;border-right:1px solid var(--line);padding:24px 14px;position:sticky;top:62px;height:calc(100vh - 62px);overflow:auto}
+.sidehead{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#94a2a9;font-weight:800;margin:8px 13px 13px}
+.nav{color:#536773;background:transparent;border-radius:7px;padding:12px 13px;margin:2px 0;font-weight:600;box-shadow:none}
+.nav:hover{background:#f2f7f5;color:var(--green)}
+.nav.active{background:#eaf4ef;color:var(--green);border-left:0;box-shadow:inset 3px 0 var(--teal)}
+.nav .sym,.nav.active .sym{color:var(--green);font-size:18px;width:24px}
+.sidebar div[style*="margin:35px"]{color:#94a3aa!important;border-top:1px solid var(--line);padding-top:15px;margin-top:25px!important}
+.content{padding:24px 34px 55px;max-width:1750px;margin:auto}
+.crumb{font-size:12px;color:#86939d;margin-bottom:17px}.crumb b{color:var(--green)}
+.hero{background:#145b44!important;border-radius:12px;padding:25px 30px;min-height:145px;box-shadow:none;border:0}
+.hero:after{display:none!important}
+.eyebrow{color:#b4e5cd;font-size:11px;letter-spacing:2px}
+.hero h1{font-size:clamp(25px,3vw,34px);margin:9px 0;letter-spacing:0;line-height:1.18}
+.hero p{color:#d4ece0;font-size:13px;line-height:1.6}
+.demo{background:#d6f3e2;color:var(--green);border-radius:5px;padding:4px 9px}
+.toolbar{margin:18px 0 16px;gap:10px}.toolbar label{color:var(--muted);font-size:11px;letter-spacing:.5px}
+.seg{background:#ebf0f1;padding:4px;border-radius:8px;gap:2px}
+.seg button{padding:8px 13px;border-radius:6px;font-size:12px;color:#667e81}
+.seg button.active{background:var(--green);color:white;box-shadow:none}
+.toolbar select,.search,.filterrow select{border:1px solid #d6e0e4;background:#fff;border-radius:7px;min-height:40px;color:var(--ink)}
+.cards{gap:13px}
+.kpi{background:#fff;border:1px solid var(--line);border-left:1px solid var(--line);border-radius:10px;min-height:116px;padding:16px;box-shadow:0 5px 22px #1a3d4a0b}
+.kpi:hover{transform:translateY(-2px);box-shadow:0 5px 22px #1a3d4a18}
+.kpi .lbl{color:#5b7480;font-size:12px;text-transform:none}
+.kpi strong{color:var(--green);font-size:35px;margin:7px 0 4px}
+.kpi small{color:#8a9aa1;font-size:11px}
+.kpi.critical{border-left-color:var(--line)}.kpi.critical strong{color:var(--red)}
+.kpi.late{border-left-color:var(--line)}.kpi.late strong{color:var(--orange)}
+.section{border:1px solid var(--line);background:#fff;border-radius:10px;padding:21px;margin-top:18px;box-shadow:0 5px 22px #1a3d4a0b}
+.section h2{font-size:19px;color:#213f46}
+.section .sub{color:var(--muted)}
+.summary{background:#fff;border:0;border-top:1px solid #edf0f1;border-radius:0;margin:0;padding:13px 2px}
+.summary:hover{background:#f7fbf9;border-color:#edf0f1}
+.summary .time{color:var(--green)}.summary .note{color:var(--muted)}
+.pill{border-radius:6px;background:#edf4f0;color:#287453;padding:5px 9px;font-size:11px}
+.pill.bad{background:#fcebec;color:#b33945}.pill.warn{background:#fff4df;color:#a76b1b}.pill.good{background:#e8f6ef;color:#1b7552}
+.data th{background:#f3f7f5;color:#688275;font-size:10px;letter-spacing:.45px}
+.data td{border-bottom:1px solid #edf0f1;padding:13px}.data tbody tr:hover{background:#f4faf7}
+.data .id{color:var(--teal)}
+.linkbtn,.actionbtn,.btn{border-radius:7px}
+.linkbtn{border:1px solid #cddbd4;color:var(--green);background:#fff;padding:10px 15px}
+.linkbtn:hover{background:var(--mint)}
+.panel{background:#fff;box-shadow:-6px 0 30px #0002}
+.panelheader{border-bottom:1px solid var(--line)}
+.close{background:#eef4f0;color:var(--green);border-radius:7px}
+.noteBox{background:#eef7f2;border-left:3px solid var(--teal);border-radius:6px}
+@media(max-width:1100px){.sidebar{width:78px}.content{padding:20px}.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.top{padding:0 13px}.sidebar{width:56px;display:block;padding:12px 4px}.sidehead,.sidebar div[style*="margin:35px"]{display:none}.nav{padding:10px 4px;justify-content:center}.nav span:not(.sym){display:none}.content{padding:15px}.hero{padding:23px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.summary{grid-template-columns:48px 1fr 80px}.summary .note{display:none}}
+</style>
+<style id="avesto-modern-sharepoint-theme">
+/* Visual demonstration of a standard modern SharePoint team site: no new views or functions. */
+:root{--green:#176b50;--green2:#145741;--mint:#edf6f1;--teal:#176b50;--ink:#242b32;--muted:#66737c;--line:#e3e8e6;--bg:#fff;--white:#fff;--red:#b42335;--orange:#9c6514}
+html{scroll-behavior:smooth}body{background:#fff;color:var(--ink);font:14px/1.5 'Segoe UI Variable','Segoe UI',Arial,sans-serif;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font-family:inherit}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #176b50;outline-offset:2px}
+.top{height:64px;position:sticky;top:0;z-index:15;background:#fff;border:0;border-bottom:1px solid #e5e8e7;padding:0 34px;gap:15px;box-shadow:none}
+.waffle{width:35px;height:35px;color:#267654;background:#f0f6f2;border-radius:4px;font-size:20px}
+.brand{font-size:17px;letter-spacing:.15px;color:#205b44;font-weight:700}.top>span[style*="color:#9db0a6"]{color:#d1d8d4!important}.top>span[style*="color:#557366"]{color:#4c5b58!important;font-size:14px}
+.topright{font-size:12px;color:#76827e}.avatar{padding:8px 10px;background:#e0efe6;color:#17664a;border-radius:50%;font-size:12px}
+.shell{min-height:calc(100vh - 64px);align-items:stretch}
+.sidebar{width:248px;height:calc(100vh - 64px);position:sticky;top:64px;overflow:auto;flex-shrink:0;padding:25px 11px 18px 15px;background:#fbfcfb;border-right:1px solid #e8ece9}
+.sidehead{color:#858f8b;font-size:10px;font-weight:700;letter-spacing:1.3px;margin:0 13px 17px}
+.nav{font-size:13px;font-weight:500;min-height:43px;color:#44544c;border-radius:3px;padding:10px 12px;margin:1px 0;transition:background .12s;box-shadow:none;gap:9px}
+.nav:hover{background:#edf4ef;color:#185c43}.nav.active{background:#e7f2ec;color:#145c40;box-shadow:inset 3px 0 #1c805c;border:0;font-weight:650}
+.nav .sym,.nav.active .sym{color:#377b60;font-size:18px;line-height:1;width:23px}.nav.active .sym{color:#146b4b}
+.sidebar div[style*="margin:35px"]{border-top:1px solid #e5ebe7;color:#819089!important;margin-top:26px!important;padding-top:17px;font-size:10px!important}
+.content{width:100%;max-width:1560px;padding:26px 38px 54px;margin:0 auto;min-width:0}
+.crumb{color:#7d8984;font-size:12px;margin-bottom:17px}.crumb b{color:#17664a;font-weight:600}
+.hero{padding:32px 36px 31px!important;min-height:165px;border-radius:2px;background:#176b50!important;box-shadow:none;border:0;overflow:hidden}
+.hero:after{display:none!important}.eyebrow{color:#c3e6d1;letter-spacing:1.5px;font-weight:600;font-size:10px}
+.hero h1{font-size:clamp(26px,2.45vw,34px);font-weight:650;letter-spacing:-.5px;line-height:1.18;margin:12px 0 11px}
+.hero p{color:#e7f2eb;line-height:1.65;font-size:14px;max-width:870px}.demo{padding:3px 8px;border-radius:3px;background:#e7f3ed;color:#246247;font-size:10px;letter-spacing:.2px}
+.toolbar{margin:22px 0 18px;gap:11px}.toolbar label{color:#68766e;font-size:11px;font-weight:650;letter-spacing:.6px}
+.seg{border:1px solid #e1e8e3;background:#f5f8f5;padding:3px;border-radius:4px;gap:0}
+.seg button{padding:8px 13px;border-radius:2px;font-size:11px;font-weight:600;color:#536a5b}.seg button:hover{background:#eaf2ed}.seg button.active{background:#196b4e;color:#fff;box-shadow:none}
+.toolbar select,.filterrow select,.search{border:1px solid #cdd9d1;border-radius:3px;box-shadow:none;min-height:39px;color:#293e33;background:#fff;padding:8px 12px}
+.cards{grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.kpi{border:1px solid #e1e8e3;background:#fff;border-radius:3px;box-shadow:none;min-height:127px;padding:17px 17px 14px;transition:background .12s,border-color .12s;position:relative}
+.kpi:after{content:'';display:none}.kpi:hover{transform:none;background:#f6faf7;border-color:#bdcfbf;box-shadow:none}
+.kpi .lbl{color:#53665a;font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;line-height:1.35}
+.kpi strong{font-size:37px;line-height:1.1;font-weight:650;color:#186a4d;letter-spacing:-.75px;margin:10px 0 7px}
+.kpi small{font-size:11px;color:#75847a}.kpi.critical,.kpi.late{border-left-color:#e1e8e3}.kpi.critical strong{color:#b42335}.kpi.late strong{color:#956414}
+.section{background:#fff;border:1px solid #e3e9e5;border-radius:3px;box-shadow:none;padding:23px 26px;margin-top:19px}
+.section h2{color:#22392e;font-size:19px;font-weight:650;letter-spacing:-.2px;margin:0 0 4px}
+.section .sub{color:#718077;font-size:12px;margin-bottom:17px}.mini{color:#77867d;font-size:11px}
+.summary{background:#fff;border:0;border-top:1px solid #e9efeb;padding:15px 6px;margin:0;border-radius:0;gap:14px;grid-template-columns:73px minmax(160px,1.2fr) minmax(160px,1fr) 110px;transition:background .1s}
+.summary:hover{background:#f6faf7;border-color:#e9efeb}.summary .name{font-size:13px;color:#253830;font-weight:600}.summary .time{color:#337b5d}.summary .note{font-size:12px;color:#74847a}
+.pill{border-radius:3px;font-size:11px;font-weight:600;padding:4px 8px;background:#edf4ef;color:#32694c}.pill.good{background:#e7f3eb;color:#1c6a43}.pill.warn{background:#fbf1dd;color:#91621c}.pill.bad{background:#fbe9ec;color:#a32e40}
+.filterrow{margin:16px 0 14px;gap:9px}.filterrow input{min-width:190px;flex:1}
+.tablewrap{border:1px solid #e5ebe7;border-radius:3px;overflow-x:auto}
+.data{min-width:800px}.data th{background:#f8faf8;color:#536d5e;font-size:11px;font-weight:650;letter-spacing:0;text-transform:none;padding:13px 14px;border-bottom:1px solid #dfe9e2}
+.data td{padding:14px;border-bottom:1px solid #edf0ee;color:#343f39;font-size:13px}.data tbody tr:last-child td{border-bottom:0}.data tbody tr:hover{background:#f4f8f5}.data .id{color:#176a4b;font-weight:650}.data .titlecell{font-weight:550}
+.actionbtn,.linkbtn,.editmini{border-radius:3px;font-size:12px;font-weight:600;transition:background .12s;box-shadow:none}
+.actionbtn{background:#176b50;color:#fff;border:1px solid #176b50;padding:10px 17px}.actionbtn:hover{background:#12563f;border-color:#12563f}
+.linkbtn{background:#fff;color:#176b50;border:1px solid #a5c5b1;padding:10px 14px}.linkbtn:hover{background:#f1f8f4}
+.editmini{background:transparent;color:#176b50;border:0;padding:5px 6px;margin-left:4px;text-decoration:underline;text-underline-offset:2px}.editmini:hover{background:#e8f3eb}
+.overlay{background:#15251cb0;z-index:40}.panel{padding:31px 34px;width:min(625px,100%);border-left:1px solid #dce8df;box-shadow:-9px 0 35px #102d1922}
+.panelheader{border-bottom:1px solid #e3eae4;padding-bottom:18px}.panelheader h2{color:#24382c!important;font-weight:650;font-size:23px;line-height:1.3}.close{color:#385644;background:#f0f5f1;border-radius:3px;font-size:21px;line-height:1.1}.close:hover{background:#e3eee6}
+.detailgrid{grid-template-columns:145px 1fr;gap:15px;padding:12px 0;border-bottom:1px solid #edf1ed;font-size:13px}.detailgrid span:first-child{color:#738077}.detailgrid span:last-child{font-weight:550}
+.noteBox{background:#f5faf7;border-left:3px solid #2b8a60;border-radius:0;padding:17px 20px;line-height:1.7;color:#354b3d}
+.formgrid{gap:15px;margin-top:20px}.formfield{color:#4b6254;font-size:12px;font-weight:600;gap:6px}.formfield input,.formfield select,.formfield textarea{border:1px solid #bdccc1;border-radius:3px;background:#fff;color:#293b30;font-size:13px;padding:10px 11px}.formactions{padding-top:5px}
+.hint{font-size:11px;color:#87938c;line-height:1.6}.foot{color:#8d9991;font-size:10px;border-top:1px solid #e9eeeb;padding-top:17px;margin-top:22px}
+@media(max-width:1180px){.sidebar{width:210px}.content{padding:22px 24px}.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:800px){.top{height:60px;padding:0 15px;gap:10px}.topright{display:none}.sidebar{width:62px;top:60px;height:calc(100vh - 60px);padding:16px 5px}.sidehead,.sidebar div[style*="margin:35px"],.nav span:not(.sym){display:none}.nav{justify-content:center;padding:12px 5px}.content{padding:18px 16px}.hero{padding:25px 23px!important}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.kpi{padding:14px;min-height:113px}.kpi strong{font-size:31px}.section{padding:17px}.summary{grid-template-columns:55px 1fr 90px;padding:12px 3px}.summary .note{display:none}.toolbar{gap:8px}.toolbar select{min-width:155px}.seg button{padding:8px 9px}}
+@media(max-width:480px){.top>span[style*="color:#557366"],.top>span[style*="color:#9db0a6"]{display:none}.brand{font-size:14px}.avatar{font-size:11px}.sidebar{width:51px}.content{padding:13px 11px}.hero h1{font-size:24px}.kpi .lbl{font-size:11px}.kpi small{font-size:10px}.section-top{align-items:flex-start}.summary{grid-template-columns:48px 1fr 78px}.foot{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+
+<style id="avesto-edit-button-alignment">
+/* Контролируемое выравнивание стандартных действий в представлении списка */
+.data { min-width: 1040px; table-layout: auto; }
+.data th:last-child,.data td:last-child { min-width: 215px; width: 215px; }
+.data td { vertical-align: middle; }
+.status-actions { display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 32px; white-space: nowrap; }
+.status-actions .pill { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; margin: 0; }
+.status-actions .editmini { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; margin: 0; padding: 6px 8px; line-height: 1.3; min-height: 30px; }
+.section-top { flex-wrap: wrap; }
+.section-top .actionbtn { flex: 0 0 auto; white-space: nowrap; }
+.formactions { display: flex; align-items: center; flex-wrap: wrap; }
+.formactions > button { margin: 0; min-width: 108px; }
+@media(max-width:760px) { .data { min-width: 1040px; } .status-actions { gap: 8px; } }
+</style>
+<style id="kpp-column-style">.kpp-table{min-width:1700px}.kpp-table th:nth-child(4){min-width:175px}.kpp-table th:nth-child(5){min-width:205px}.kpp-table th:nth-child(6){min-width:160px}.kpp-table th:nth-child(7){min-width:220px}.kpp-table th:nth-child(8){min-width:80px}.kpp-table th:nth-child(9){min-width:95px}.kpp-table th:last-child{min-width:208px}.kpp-table td{vertical-align:middle}.kpp-table .status-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;white-space:nowrap}.kpp-table .editmini{margin-left:0}.kpp-table .hint{font-size:11px;margin-top:3px}.formfield input[type="time"]{width:100%}</style></head><body>
+<div class="top"><span class="waffle">▦</span><span class="brand">AVESTO GROUP</span><span style="color:#9db0a6">│</span><span style="color:#557366">Центр безопасности</span><span class="sp"></span><span class="topright">Портал управленческого контроля · демоверсия</span><span class="avatar">АГ</span></div>
+<div class="shell"><aside class="sidebar"><div class="sidehead">НАВИГАЦИЯ</div><div id="nav"></div><div style="margin:35px 12px 0;font-size:11px;color:#91a49a;line-height:1.6">ДЕМО-ВЕРСИЯ<br>Все события и цифры вымышленные. Не является действующим SharePoint.</div></aside><main class="content"><div class="crumb">AVESTO GROUP / <b id="crumb">Центр безопасности</b></div><div id="main"></div><div class="foot"><span>AVESTO GROUP · КОНЦЕПЦИЯ ЕДИНОЙ СИСТЕМЫ БЕЗОПАСНОСТИ</span><span>Демонстрационный прототип · 2026</span></div></main></div>
+<div class="overlay" id="overlay" onclick="if(event.target===this)closePanel()"><div class="panel" id="panel"></div></div>
+<script>
+const db={"journals":{"incidents":[{"id":"INC-2026-044","site":"Предприятие № 4","title":"Несанкционированное проникновение в зону хранения ГСМ","priority":"Критический","status":"В работе","date":"2026-11-01","owner":"Начальник СБ","details":"Демонстрационный сценарий. Оператор САЦ обнаружил проникновение постороннего лица в охраняемую зону хранения ГСМ. Незамедлительно уведомлены начальник смены охраны и дежурный специалист СБ. Организована проверка периметра, ограничен доступ к участку, проводится сверка сохранности имущества. Информация передана руководству, исполнение мер находится на контроле.","due":"2026-11-01"},{"id":"INC-2026-041","site":"Предприятие № 1","title":"Попытка выноса медного кабеля со склада","priority":"Критический","status":"Закрыт","date":"2026-10-31","owner":"Начальник охраны","details":"На КПП выявлена попытка вывоза кабеля без разрешения. Транспорт задержан, материалы переданы СБ, проведена сверка ТМЦ.","due":"2026-11-01"},{"id":"INC-2026-042","site":"Предприятие № 3","title":"Потеря сигнала с камер участка отгрузки","priority":"Высокий","status":"В работе","date":"2026-11-01","owner":"Инженер ИТ","details":"Оператор САЦ зафиксировал отключение шести камер. ИТ-служба уведомлена, организован дополнительный обход охраной.","due":"2026-11-02"},{"id":"INC-2026-043","site":"Предприятие № 2","title":"Нарушение порядка допуска подрядчика","priority":"Средний","status":"Просрочен","date":"2026-10-29","owner":"Специалист СБ","details":"Выявлено несоответствие списка допущенных работников фактическому составу бригады. Запрошены объяснения и корректировка допуска.","due":"2026-10-31"}],"effect":[{"id":"EFF-2026-011","site":"Предприятие № 4","title":"Здесь будет кратко описано событие или предмет проверки","priority":"Плановый","status":"На проверке","date":"2026-10-28","owner":"Экономическая безопасность","details":"Здесь будет изложена информация о предмете анализа, выявленных обстоятельствах и расчёте экономического эффекта (при наличии).","due":"2026-10-31"},{"id":"EFF-2026-012","site":"Предприятие № 1","title":"Здесь будет кратко описано событие или предмет проверки","priority":"Плановый","status":"В работе","date":"2026-10-30","owner":"Специалист СБ","details":"Здесь будет изложена информация о предмете анализа, выявленных обстоятельствах и расчёте экономического эффекта (при наличии).","due":"2026-11-04"},{"id":"EFF-2026-013","site":"Предприятие № 5","title":"Здесь будет кратко описано событие или предмет проверки","priority":"Плановый","status":"Закрыт","date":"2026-10-24","owner":"Экономическая безопасность","details":"Здесь будет изложена информация о предмете анализа, выявленных обстоятельствах и расчёте экономического эффекта (при наличии).","due":"2026-10-27"}],"investigations":[{"id":"CHK-2026-017","site":"Предприятие № 2","title":"Здесь будет кратко описано основание для служебной проверки","priority":"Плановый","status":"В работе","date":"2026-10-30","owner":"Главный специалист СБ","details":"Здесь будут отражены основание проверки, установленные обстоятельства, полученные материалы и результаты рассмотрения.","due":"2026-11-05"},{"id":"CHK-2026-018","site":"Предприятие № 3","title":"Здесь будет кратко описано основание для служебной проверки","priority":"Плановый","status":"Закрыт","date":"2026-10-25","owner":"Специалист СБ","details":"Здесь будут отражены основание проверки, установленные обстоятельства, полученные материалы и результаты рассмотрения.","due":"2026-10-29"},{"id":"CHK-2026-019","site":"Предприятие № 5","title":"Здесь будет кратко описано основание для служебной проверки","priority":"Плановый","status":"В работе","date":"2026-11-01","owner":"Экономическая безопасность","details":"Здесь будут отражены основание проверки, установленные обстоятельства, полученные материалы и результаты рассмотрения.","due":"2026-11-06"}],"orders":[{"id":"ORD-2026-024","site":"Предприятие № 3","title":"Здесь будет кратко описано замечание или поручение","priority":"Плановый","status":"В работе","date":"2026-10-26","owner":"ИТ-служба","details":"Здесь будут указаны содержание предписания, необходимые действия, срок исполнения и подтверждающие материалы.","due":"2026-10-30"},{"id":"ORD-2026-025","site":"Предприятие № 1","title":"Здесь будет кратко описано замечание или поручение","priority":"Плановый","status":"Закрыт","date":"2026-10-24","owner":"Начальник склада","details":"Здесь будут указаны содержание предписания, необходимые действия, срок исполнения и подтверждающие материалы.","due":"2026-10-29"},{"id":"ORD-2026-026","site":"Предприятие № 4","title":"Здесь будет кратко описано замечание или поручение","priority":"Плановый","status":"В работе","date":"2026-10-31","owner":"Руководитель участка","details":"Здесь будут указаны содержание предписания, необходимые действия, срок исполнения и подтверждающие материалы.","due":"2026-11-05"}],"guards":[{"id":"GRD-2026-031","site":"Предприятие № 1","title":"Здесь будет кратко описано событие или результат контроля охраны","priority":"Плановый","status":"Закрыт","date":"2026-10-29","owner":"Старший смены","details":"Здесь будут отражены обстоятельства события, результаты контроля постов и смен, принятые меры и сведения о выполнении.","due":"2026-10-30"},{"id":"GRD-2026-032","site":"Предприятие № 2","title":"Здесь будет кратко описано событие или результат контроля охраны","priority":"Плановый","status":"В работе","date":"2026-10-31","owner":"Начальник охраны","details":"Здесь будут отражены обстоятельства события, результаты контроля постов и смен, принятые меры и сведения о выполнении.","due":"2026-11-03"},{"id":"GRD-2026-033","site":"Предприятие № 5","title":"Здесь будет кратко описано событие или результат контроля охраны","priority":"Плановый","status":"Закрыт","date":"2026-10-27","owner":"Старший смены","details":"Здесь будут отражены обстоятельства события, результаты контроля постов и смен, принятые меры и сведения о выполнении.","due":"2026-10-28"}],"counterparties":[{"id":"CTR-2026-008","site":"Предприятие № 4","title":"Здесь будет кратко указан предмет проверки контрагента или кандидата","priority":"Плановый","status":"На проверке","date":"2026-10-30","owner":"Экономическая безопасность","details":"Здесь будут отражены основание проверки, проверенные сведения, результаты и заключение уполномоченного сотрудника.","due":"2026-11-04"},{"id":"CTR-2026-009","site":"Предприятие № 1","title":"Здесь будет кратко указан предмет проверки контрагента или кандидата","priority":"Плановый","status":"Закрыт","date":"2026-10-25","owner":"Специалист СБ","details":"Здесь будут отражены основание проверки, проверенные сведения, результаты и заключение уполномоченного сотрудника.","due":"2026-10-28"},{"id":"CTR-2026-010","site":"Предприятие № 3","title":"Здесь будет кратко указан предмет проверки контрагента или кандидата","priority":"Плановый","status":"На проверке","date":"2026-11-01","owner":"Экономическая безопасность","details":"Здесь будут отражены основание проверки, проверенные сведения, результаты и заключение уполномоченного сотрудника.","due":"2026-11-05"}],"vehicles":[{"id":"KPP-2026-021","date":"2026-11-01","site":"Предприятие № 1","title":"А123ВС 77 · Toyota Camry","driver":"Иванов Сергей Петрович","company":"ООО «ТехСервис»","action":"Посещение (без груза)","tmcName":"","tmcQuantity":"","tmcUnit":"","direction":"Въезд","timeIn":"08:15","timeOut":"09:05","purpose":"Деловая встреча с представителем предприятия","owner":"Охранник КПП № 1","status":"Выезд оформлен","details":"Разовый пропуск № 0148. Транспорт прибыл без груза, посещение завершено."},{"id":"KPP-2026-022","date":"2026-11-01","site":"Предприятие № 3","title":"М457КТ 116 · КамАЗ 65115","driver":"Петров Алексей Николаевич","company":"ООО «КарьерСнаб»","action":"Ввоз","tmcName":"Щебень фракции 20–40 мм","tmcQuantity":"25","tmcUnit":"т","direction":"Въезд и выезд","timeIn":"09:20","timeOut":"10:35","purpose":"Поставка щебня на производственную площадку","owner":"Охранник КПП № 2","status":"Выезд оформлен","details":"Транспортная накладная № 582. Въезд с грузом, выезд после разгрузки."},{"id":"KPP-2026-023","date":"2026-11-01","site":"Предприятие № 2","title":"Е908ХХ 77 · MAN TGX","driver":"Сидоров Дмитрий Владимирович","company":"АО «РегионЛогистика»","action":"Вывоз","tmcName":"Руда железная","tmcQuantity":"28","tmcUnit":"т","direction":"Въезд и выезд","timeIn":"11:10","timeOut":"12:40","purpose":"Вывоз руды с производственной территории","owner":"Старший смены КПП","status":"Выезд оформлен","details":"Накладная № 641. Выезд гружёного автомобиля по оформленным документам."}]},"labels":{"incidents":"Журнал инцидентов","effect":"Экономический эффект","investigations":"Служебные проверки","orders":"Предписания СБ","guards":"Контроль охраны","counterparties":"Проверки контрагентов и кандидатов","vehicles":"Журнал въезда и выезда Т/С (КПП)"}};
+const names=db.labels, journals=db.journals;
+const defaultVehicleRecords=JSON.parse(JSON.stringify(journals.vehicles));
+try { const saved=JSON.parse(localStorage.getItem('avesto_demo_records_v1')||'null'); if(saved&&typeof saved==='object') for(const k of Object.keys(journals)) if(Array.isArray(saved[k])) journals[k]=saved[k]; } catch(e) {}
+// Обновление старых демонстрационных данных КПП с предыдущей версии.
+if(journals.vehicles.length===5 && journals.vehicles.every(r=>!r.action)) journals.vehicles=defaultVehicleRecords;
+function persist(){try{localStorage.setItem('avesto_demo_records_v1',JSON.stringify(journals));}catch(e){alert('Браузер не разрешил сохранить изменения.');}}
+let editing=null;
+
+const sites=["Все 5 предприятий",...Array.from({length:5},(_,i)=>"Предприятие № "+(i+1))];
+const state={page:"dashboard",site:"Все 5 предприятий",period:"month",status:"Все",query:""};
+const navs=[["dashboard","▤","Главная"],["incidents","◉",names.incidents],["effect","◈",names.effect],["investigations","▣",names.investigations],["orders","☷",names.orders],["guards","♜",names.guards],["vehicles","▤",names.vehicles]];
+const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function entries(key){return journals[key].filter(r=>state.site===sites[0]||r.site===state.site)}
+function allEntries(){return Object.keys(journals).flatMap(k=>entries(k).map(r=>({...r,journal:k})))}
+function periodFilter(a){const start={day:"2026-11-01",week:"2026-10-26",month:"2026-10-01",year:"2026-01-01"}[state.period];return a.filter(r=>r.date>=start)}
+function statPill(s){let c=/Просрочен/.test(s)?"bad":/Закрыт|Подтверждено|Выезд оформлен/.test(s)?"good":/Критическ/.test(s)?"bad":/В работе|На проверке|На территории/.test(s)?"warn":"";return `<span class="pill ${c}">${esc(s)}</span>`}
+function nav(){document.getElementById("nav").innerHTML=navs.map(([k,ic,n])=>`<button class="nav ${state.page===k?"active":""}" onclick="go('${k}')"><span class="sym">${ic}</span><span>${esc(n)}</span></button>`).join("")}
+function go(p,st="Все"){state.page=p;state.status=st;state.query="";render();window.scrollTo({top:0,behavior:"smooth"})}
+function siteSelect(){return `<label for="site">ЮРЛИЦО</label><select id="site" onchange="state.site=this.value;render()">${sites.map(s=>`<option ${s===state.site?"selected":""}>${esc(s)}</option>`).join("")}</select>`}
+function hero(title,sub){return `<div class="hero"><div class="eyebrow">AVESTO GROUP · СЛУЖБА БЕЗОПАСНОСТИ <span class="demo">ДЕМО</span></div><h1>${title}</h1><p>${sub}</p></div>`}
+function renderDashboard(){const a=periodFilter(entries("incidents"));const counts=[a.filter(r=>r.priority==="Критический").length,a.length,a.filter(r=>r.status==="Закрыт").length,a.filter(r=>r.status==="Просрочен").length,entries("guards").length];const cards=[["Критические","Открыть инциденты","critical","Критический"],["Всего инцидентов","Зарегистрировано","","Все"],["Отработано","Результат подтверждён","","Закрыт"],["Просрочено","Срок исполнения истёк","late","Просрочен"],["Нарушения охраны","Выявлено нарушений","","Все"]];let h=hero("Добро пожаловать в Центр безопасности","Единая точка доступа к оперативным сводкам, электронным журналам, документам и совместной работе сотрудников.");
+h+=`<div class="toolbar"><label>ПЕРИОД ОТОБРАЖЕНИЯ</label><div class="seg">${[["day","СУТКИ"],["week","НЕДЕЛЯ"],["month","МЕСЯЦ"],["year","ГОД"]].map(([k,v])=>`<button class="${state.period===k?"active":""}" onclick="state.period='${k}';render()">${v}</button>`).join("")}</div><span class="sp"></span>${siteSelect()}</div>`;
+h+=`<div class="cards">${cards.map((c,i)=>`<button class="kpi ${c[2]}" onclick="go('${i===4?'guards':'incidents'}','${c[3]}')"><span class="lbl">${c[0]}</span><strong>${counts[i]}</strong><small>${c[1]} ↗</small></button>`).join("")}</div>`;
+h+=`<section class="section"><div class="section-top"><h2>Краткая сводка событий</h2><span class="mini">Нажмите на запись для просмотра</span></div><div class="sub">Примеры оперативных событий за выбранный период</div>${a.length?a.map(r=>`<div class="summary" onclick="openRecord('incidents','${r.id}')"><span class="time">${esc(r.date.slice(5))}</span><span class="name">${esc(r.title)}</span><span class="note">${esc(r.site)} · ${esc(r.owner)}</span>${statPill(r.status)}</div>`).join(""):'<div class="empty">За выбранный период записей нет</div>'}</section>`;
+h+=`<p class="hint">Демонстрационный макет: показатели рассчитаны по небольшому набору вымышленных записей. Все сведения приведены исключительно для демонстрации.</p>`;return h}
+function renderJournal(){const key=state.page;let h=hero(names[key],"Электронный журнал · демонстрационные формулировки · контроль исполнения");
+h+=`<div class="toolbar">${siteSelect()}<span class="sp"></span><button class="linkbtn" onclick="go('dashboard')">← Главная</button></div>`;
+h+=`<section class="section"><div class="section-top"><h2>${esc(names[key])}</h2><button class="actionbtn" onclick="editRecord(null)">＋ Внести данные</button></div><div class="filterrow"><input class="search" id="q" placeholder="Поиск по номеру, объекту, событию..." value="${esc(state.query)}" oninput="state.query=this.value;updateTable()"><select id="st" onchange="state.status=this.value;updateTable()">${(key==="vehicles"?["Все","На территории","Выезд оформлен"]:["Все","Закрыт","В работе","Просрочен","Подтверждено","На проверке"]).map(x=>`<option ${state.status===x?"selected":""}>${x}</option>`).join("")}</select><button class="linkbtn" onclick="state.query='';state.status='Все';render()">Сбросить</button></div><div id="table"></div></section>`;return h}
+function updateTable(){
+ let q=state.query.toLowerCase().trim();
+ let a=entries(state.page).filter(r=>(state.status==="Все"||r.status===state.status)&&(!q||Object.values(r).some(v=>String(v).toLowerCase().includes(q))));
+ if(state.page==='vehicles'){
+ document.getElementById("table").innerHTML=`<div class="tablewrap"><table class="data kpp-table"><thead><tr><th>№ записи</th><th>Дата</th><th>Предприятие</th><th>Транспортное средство</th><th>Водитель / организация</th><th>Действие</th><th>Наименование ТМЦ</th><th>Кол-во</th><th>Ед. изм.</th><th>Въезд</th><th>Выезд</th><th>Статус / действия</th></tr></thead><tbody>${a.map(r=>`<tr onclick="openRecord('vehicles','${r.id}')"><td class="id">${esc(r.id)}</td><td>${esc(r.date)}</td><td>${esc(r.site)}</td><td class="titlecell">${esc(r.title)}</td><td>${esc(r.driver)}<div class="hint">${esc(r.company)}</div></td><td><span class="pill">${esc(r.action||'—')}</span></td><td>${esc(r.tmcName||'—')}</td><td>${esc(r.tmcQuantity||'—')}</td><td>${esc(r.tmcUnit||'—')}</td><td>${esc(r.timeIn||'—')}</td><td>${esc(r.timeOut||'—')}</td><td><span class="status-actions">${statPill(r.status)} <button class="editmini" onclick="event.stopPropagation();editRecord('${r.id}')">Редактировать</button></span></td></tr>`).join("")}</tbody></table>${!a.length?'<div class="empty">Нет записей по выбранным условиям</div>':""}</div><p class="hint">Демонстрационные данные. Нажмите на строку, чтобы открыть полную карточку проезда.</p>`;
+ return;
+ }
+ document.getElementById("table").innerHTML=`<div class="tablewrap"><table class="data"><thead><tr><th>Номер</th><th>Дата</th><th>Предприятие</th><th>Событие / предмет проверки</th><th>Ответственный</th><th>Статус</th></tr></thead><tbody>${a.map(r=>`<tr onclick="openRecord('${state.page}','${r.id}')"><td class="id">${esc(r.id)}</td><td>${esc(r.date)}</td><td>${esc(r.site)}</td><td class="titlecell">${esc(r.title)}</td><td>${esc(r.owner)}</td><td><span class="status-actions">${statPill(r.status)} <button class="editmini" onclick="event.stopPropagation();editRecord('${r.id}')">Редактировать</button></span></td></tr>`).join("")}</tbody></table>${!a.length?'<div class="empty">Нет записей по выбранным условиям</div>':""}</div><p class="hint">Нажмите на строку, чтобы открыть полную карточку. Все сведения условные.</p>`}
+function openRecord(k,id){const r=journals[k].find(x=>x.id===id);if(!r)return;if(k==='vehicles'){
+ document.getElementById("panel").innerHTML=`<div class="panelheader"><div><div class="eyebrow" style="color:var(--teal)">ЖУРНАЛ КПП · УЧЁТ ТРАНСПОРТА</div><h2>${esc(r.title)}</h2><div class="hint">${esc(r.id)} · ${esc(r.site)}</div></div><button class="close" onclick="closePanel()" aria-label="Закрыть">×</button></div>${[["Номер записи",r.id],["Дата",r.date],["Предприятие",r.site],["Транспортное средство",r.title],["Водитель",r.driver],["Организация",r.company],["Действие",r.action||"—"],["Наименование ТМЦ",r.tmcName||"—"],["Количество",r.tmcQuantity||"—"],["Единица измерения",r.tmcUnit||"—"],["Тип операции",r.direction],["Время въезда",r.timeIn||'—'],["Время выезда",r.timeOut||'—'],["Цель прибытия",r.purpose],["Ответственный на КПП",r.owner],["Статус",r.status]].map(([l,v])=>`<div class="detailgrid"><span>${esc(l)}</span><span>${esc(v)}</span></div>`).join("")}<h3 style="margin:25px 0 5px;color:var(--green)">Примечание</h3><div class="noteBox">${esc(r.details)}</div><button class="actionbtn" style="margin-top:18px" onclick="closePanel();state.page='vehicles';editRecord('${r.id}')">✎ Редактировать запись</button>`;document.getElementById("overlay").classList.add("open");return;}
+ document.getElementById("panel").innerHTML=`<div class="panelheader"><div><div class="eyebrow" style="color:var(--teal)">${esc(names[k])}</div><h2 style="margin:9px 0;color:var(--green)">${esc(r.title)}</h2><div class="hint">${esc(r.id)} · демонстрационная запись</div></div><button class="close" onclick="closePanel()" aria-label="Закрыть">×</button></div>${[["Номер",r.id],["Предприятие",r.site],["Дата регистрации",r.date],["Приоритет",r.priority],["Статус",r.status],["Ответственный",r.owner],["Контрольный срок",r.due]].map(([l,v])=>`<div class="detailgrid"><span>${esc(l)}</span><span>${esc(v)}</span></div>`).join("")}<h3 style="margin:25px 0 5px;color:var(--green)">Обстоятельства и принятые меры</h3><div class="noteBox">${esc(r.details)}</div><button class="actionbtn" style="margin-top:18px" onclick="closePanel();state.page='${k}';editRecord('${r.id}')">✎ Редактировать запись</button><p class="hint" style="margin-top:22px">Карточка демонстрирует будущую детализацию в SharePoint. Данные вымышленные.</p>`;document.getElementById("overlay").classList.add("open")}
+
+function editRecord(id){
+ const k=state.page; if(k==='dashboard')return;
+ const old=id?journals[k].find(r=>r.id===id):null;
+ const r=old||(k==='vehicles'?{id:'',date:new Date().toISOString().slice(0,10),site:sites[1],title:'',driver:'',company:'',action:'Посещение (без груза)',tmcName:'',tmcQuantity:'',tmcUnit:'шт.',direction:'Въезд',timeIn:'',timeOut:'',purpose:'',owner:'',status:'На территории',details:''}:{id:'',date:new Date().toISOString().slice(0,10),site:sites[1],title:'',priority:'Плановый',status:'В работе',owner:'',due:'',details:''});
+ editing={key:k,original:id};
+ const fields=k==='vehicles'?[['id','Номер записи','text'],['date','Дата','date'],['site','Предприятие','select',sites.slice(1)],['title','Госномер и модель Т/С','text'],['driver','Ф. И. О. водителя','text'],['company','Организация','text'],['action','Действие','select',['Ввоз','Вывоз','Посещение (без груза)','Проверка']],['tmcName','Наименование ТМЦ','text'],['tmcQuantity','Количество','number'],['tmcUnit','Единица измерения','select',['шт.','кг','т','л','м','м²','м³','компл.','упак.','паллет']],['direction','Тип операции','select',['Въезд','Выезд','Въезд и выезд']],['timeIn','Время въезда','time'],['timeOut','Время выезда','time'],['purpose','Цель прибытия','text'],['owner','Ответственный сотрудник КПП','text'],['status','Статус','select',['На территории','Выезд оформлен']],['details','Примечание / пропуск','textarea']]:[['id','Номер записи','text'],['date','Дата регистрации','date'],['site','Предприятие','select',sites.slice(1)],['title','Событие / предмет проверки','text'],['priority','Приоритет','select',['Плановый','Низкий','Средний','Высокий','Критический']],['status','Статус','select',['В работе','На проверке','Закрыт','Просрочен']],['owner','Ответственный','text'],['due','Контрольный срок','date'],['details','Обстоятельства и принятые меры','textarea']];
+ const fld=([key,label,type,options])=>`<label class="formfield"><span>${label}</span>${type==='select'?`<select name="${key}">${options.map(v=>`<option ${v===r[key]?'selected':''}>${esc(v)}</option>`).join('')}</select>`:type==='textarea'?`<textarea name="${key}" rows="5">${esc(r[key])}</textarea>`:`<input name="${key}" type="${type}" value="${esc(r[key])}" ${key==='id'&&old?'readonly':''} ${['id','title'].includes(key)?'required':''}>`}</label>`;
+ document.getElementById('panel').innerHTML=`<div class="panelheader"><div><div class="eyebrow" style="color:var(--teal)">${esc(names[k])}</div><h2>${old?'Редактировать запись':'Внести данные'}</h2></div><button class="close" onclick="closePanel()">×</button></div><form id="recordform" onsubmit="saveRecord(event)"><div class="formgrid">${fields.map(fld).join('')}</div><div class="formactions"><button class="actionbtn" type="submit">Сохранить</button><button class="linkbtn" type="button" onclick="closePanel()">Отмена</button></div><p class="hint">Изменения сохраняются только в этом браузере. Для общей работы сотрудников потребуется серверная база данных и авторизация.</p></form>`;
+ document.getElementById('overlay').classList.add('open');
+}
+function saveRecord(e){e.preventDefault();const f=new FormData(e.target);const data=Object.fromEntries(f.entries());for(const key of Object.keys(data))data[key]=String(data[key]).trim();if(!data.id||!data.title){alert('Заполните номер и описание события.');return;}const {key,original}=editing;const arr=journals[key];if(!original&&arr.some(r=>r.id===data.id)){alert('Такой номер уже существует.');return;}if(original){const i=arr.findIndex(r=>r.id===original);if(i>=0)arr[i]=data;}else arr.unshift(data);persist();closePanel();render();}
+
+function closePanel(){document.getElementById("overlay").classList.remove("open")}
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closePanel()});
+function render(){nav();document.getElementById("crumb").textContent=state.page==="dashboard"?"Центр безопасности":names[state.page];document.getElementById("main").innerHTML=state.page==="dashboard"?renderDashboard():renderJournal();if(state.page!=="dashboard")updateTable()}
+render();
+</script></body></html>
